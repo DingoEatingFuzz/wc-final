@@ -1,0 +1,28 @@
+{
+  "version": 8,
+  "sources": {
+    "linegeojson": {
+      "type": "vector",
+      "tiles": [
+        "http://localhost:7777/v2/tiles/{z}/{x}/{y}.pbf"
+      ],
+      "minzoom": 0,
+      "maxzoom": 12
+    }
+  },
+  "layers": [{
+    "id": "background",
+    "type": "background",
+    "paint": {
+      "background-color": "#EEE"
+    }
+  }, {
+    "id": "lines",
+    "type": "line",
+    "source": "linegeojson",
+    "source-layer": "Linegeojson",
+    "paint": {
+      "line-color": "#000000"
+    }
+  }]
+}
