@@ -6,6 +6,8 @@ tippecanoe:
         tippecanoe:latest \
         tippecanoe \
                 -f \
+                --maximum-zoom=g \
+                --drop-densest-as-needed \
                 --named-layer=area:/json/Area.ndjson \
                 --named-layer=line:/json/Line.ndjson \
                 --named-layer=point-event-fc:/json/PointEventFC.ndjson \
