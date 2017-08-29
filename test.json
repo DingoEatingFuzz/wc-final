@@ -1,28 +1,44 @@
 {
   "version": 8,
   "sources": {
-    "linegeojson": {
+    "nhd": {
       "type": "vector",
       "tiles": [
-        "https://storage.googleapis.com/nhd-tiles/{z}/{x}/{y}.pbf"
+        "https://storage.googleapis.com/nhd-tiles/v3/flow/{z}/{x}/{y}.pbf"
       ],
       "minzoom": 0,
       "maxzoom": 12
     }
   },
-  "layers": [{
-    "id": "background",
-    "type": "background",
-    "paint": {
-      "background-color": "#EEE"
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#E6F0FF"
+      }
+    },
+    {
+      "id": "flowlines",
+      "type": "line",
+      "source": "nhd",
+      "source-layer": "flowline",
+      "paint": {
+        "line-color": "#88CCFF",
+        "line-width": {
+          "property": "STREAMLEVEL",
+          "stops": [
+            [ 0, 0.25 ],
+            [ 1, 4 ],
+            [ 2, 3 ],
+            [ 3, 2 ],
+            [ 4, 1.5 ],
+            [ 5, 1 ],
+            [ 6, 0.5 ]
+          ]
+        }
+      },
+      "filter": [ "has", "STREAMLEVEL" ]
     }
-  }, {
-    "id": "lines",
-    "type": "line",
-    "source": "linegeojson",
-    "source-layer": "Linegeojson",
-    "paint": {
-      "line-color": "#000000"
-    }
-  }]
+  ]
 }
