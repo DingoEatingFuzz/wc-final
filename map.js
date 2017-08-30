@@ -72,7 +72,7 @@ map.on('load', function() {
 
   map.addSource('states', {
     type: 'geojson',
-    data: '/states.json',
+    data: 'states.json',
   });
 
   map.addLayer({
@@ -100,7 +100,7 @@ map.on('load', function() {
 
   map.addSource('counties', {
     type: 'geojson',
-    data: '/counties.json',
+    data: 'counties.json',
   });
 
   map.addLayer({
