@@ -3,8 +3,8 @@ mapboxgl.accessToken =
 
 var map = new mapboxgl.Map({
   container: 'map',
-  center: [-124.2, 45.1],
-  zoom: 9,
+  center: [-98.57, 39.98],
+  zoom: 4,
   style: 'test.json',
 });
 
@@ -37,7 +37,7 @@ var pointsOfInterest = [
   {
     name: 'Puerto Rico',
     description: 'Although not a state, still detailed in the NHD.',
-    at: [-66.44890781793832, 18.231122299468723, 9],
+    at: [-66.44890781793832, 18.231122299468723, 10],
   },
   {
     name: 'Canadian River Basin',
