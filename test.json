@@ -4,7 +4,7 @@
     "nhd": {
       "type": "vector",
       "tiles": [
-        "https://storage.googleapis.com/nhd-tiles/v3/flow/{z}/{x}/{y}.pbf"
+        "https://storage.googleapis.com/nhd-tiles/v6/{z}/{x}/{y}.pbf"
       ],
       "minzoom": 0,
       "maxzoom": 12
@@ -37,8 +37,16 @@
             [ 6, 0.5 ]
           ]
         }
-      },
-      "filter": [ "has", "STREAMLEVEL" ]
+      }
+    },
+    {
+      "id": "waterbody",
+      "type": "fill",
+      "source": "nhd",
+      "source-layer": "waterbody",
+      "paint": {
+        "fill-color": "#4499CC"
+      }
     }
   ]
 }
