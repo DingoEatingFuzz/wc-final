@@ -18,8 +18,8 @@
 
       var map = new mapboxgl.Map({
         container: 'map',
-        center: [-120.7, 45.1],
-        zoom: 7,
+        center: [-124.2, 45.1],
+        zoom: 9,
         style: 'test.json'
       });
 
@@ -34,8 +34,8 @@
           type: 'fill',
           source: 'land',
           paint: {
-            'fill-color': '#F3F6F0',
-            'fill-outline-color': '#DDDDFF'
+            'fill-color': '#13391C',
+            'fill-outline-color': '#3B5D25'
           }
         }, 'flowlines');
 
@@ -49,8 +49,9 @@
           type: 'line',
           source: 'states',
           paint: {
-            'line-color': '#CFCFA6',
+            'line-color': '#FFFFFF',
             'line-width': 1,
+            'line-opacity': 0.8
           }
         })
 
@@ -59,7 +60,7 @@
           type: 'fill',
           source: 'states',
           paint: {
-            'fill-color': '#F9FCF9',
+            'fill-color': '#264124',
           }
         }, 'flowlines');
 
@@ -74,8 +75,9 @@
           source: 'counties',
           minzoom: 5,
           paint: {
-            'line-color': '#CFCFA6',
-            'line-width': 0.5
+            'line-color': '#FFFFFF',
+            'line-width': 0.5,
+            'line-opacity': 0.6
           }
         });
       });

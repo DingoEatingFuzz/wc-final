@@ -15,7 +15,7 @@
       "id": "background",
       "type": "background",
       "paint": {
-        "background-color": "#E6F0FF"
+        "background-color": "#0F2336"
       }
     },
     {
@@ -24,11 +24,11 @@
       "source": "nhd",
       "source-layer": "flowline",
       "paint": {
-        "line-color": "#88CCFF",
+        "line-color": "#0E2542",
         "line-width": {
           "property": "STREAMLEVEL",
+          "default": 0.5,
           "stops": [
-            [ 0, 0.25 ],
             [ 1, 4 ],
             [ 2, 3 ],
             [ 3, 2 ],
@@ -45,7 +45,7 @@
       "source": "nhd",
       "source-layer": "waterbody",
       "paint": {
-        "fill-color": "#4499CC"
+        "fill-color": "#12294E"
       }
     }
   ]
