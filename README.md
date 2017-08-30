@@ -1,3 +1,9 @@
+**Retro:** It didn't turn out how I wanted it to. Turns out there's an upper bound to feasible vector tile sizes,
+and that bound is lower than I needed it to be. Potential next steps are to look deeper into what it would take
+to convert the vector tiles into raster tiles so the heavy rendering is prebaked. 
+
+**View it live:** [http://mlange.io/wc-final/](http://mlange.io/wc-final/)
+
 # Web Cartography Final
 
 Often missing from political discourse is geographical features. A recent example is how
